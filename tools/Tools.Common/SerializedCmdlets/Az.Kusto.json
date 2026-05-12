@@ -1,6 +1,6 @@
 {
   "ModuleName": "Az.Kusto",
-  "ModuleVersion": "2.4.1",
+  "ModuleVersion": "2.4.2",
   "Cmdlets": [
     {
       "VerbName": "Add",

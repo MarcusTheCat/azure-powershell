@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 5.2.0
 * Added `Get-AzServiceFabricManagedClusterMaintenanceWindowStatus` cmdlet to retrieve the maintenance window status of a Service Fabric Managed Cluster, including whether the window is enabled, active, and recent activity timestamps.
 
 ## Version 5.1.0

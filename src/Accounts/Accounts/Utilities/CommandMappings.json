@@ -6324,10 +6324,11 @@
       "New-AzPolicyAttestation": {},
       "Remove-AzPolicyAttestation": {},
       "Remove-AzPolicyRemediation": {},
-      "Set-AzPolicyAttestation": {},
       "Start-AzPolicyComplianceScan": {},
       "Start-AzPolicyRemediation": {},
-      "Stop-AzPolicyRemediation": {}
+      "Stop-AzPolicyRemediation": {},
+      "Update-AzPolicyAttestation": {},
+      "Set-AzPolicyAttestation": {}
     },
     "Az.Portal": {
       "Get-AzPortalDashboard": {},
@@ -7572,6 +7573,7 @@
       "Get-AzServiceFabricManagedClusterService": {},
       "Get-AzServiceFabricManagedNodeType": {},
       "Get-AzServiceFabricService": {},
+      "Get-AzServiceFabricManagedClusterMaintenanceWindowStatus": {},
       "Invoke-AzServiceFabricDeallocateManagedNodeType": {},
       "Invoke-AzServiceFabricRedeployManagedNodeType": {},
       "Invoke-AzServiceFabricReimageManagedNodeType": {},

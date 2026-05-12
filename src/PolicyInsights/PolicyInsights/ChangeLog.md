@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 2.0.0
 * The output type of `Get-AzPolicyAttestation`, `New-AzPolicyAttestation`, and `Set-AzPolicyAttestation` will change from `PSAttestation` to `Attestation`
     - The `SystemData` property will be deprecated and replaced with flattened properties: `SystemDataCreatedAt`, `SystemDataCreatedBy`, `SystemDataCreatedByType`, `SystemDataLastModifiedAt`, `SystemDataLastModifiedBy`, `SystemDataLastModifiedByType`
     - A new `ResourceGroupName` property will be added

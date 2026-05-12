@@ -20,6 +20,8 @@
 
 -->
 ## Upcoming Release
+
+## Version 11.6.0
 * Added `-InstantAccess` parameter to `New-AzRestorePointCollection` cmdlet to enable instant access snapshots for restore points on Premium SSD v2 and Ultra disks
 * Added `-InstantAccess` parameter to `Update-AzRestorePointCollection` cmdlet to enable or disable instant access on an existing restore point collection
 * Added `-InstantAccessDurationInMinutes` parameter to `New-AzRestorePoint` cmdlet to specify the duration (1-300 minutes) for which the instant access snapshot is retained

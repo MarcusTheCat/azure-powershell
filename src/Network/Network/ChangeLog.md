@@ -19,6 +19,8 @@
 --->
 
 ## Upcoming Release
+
+## Version 8.0.0
 * Updated `UserAssignedIdentityId` parameter type from string to string[] in Azure Firewall Policy to input multiple UAMIs
 
 ## Version 7.27.0

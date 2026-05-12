@@ -19,6 +19,8 @@
 -->
 
 ## Upcoming Release
+
+## Version 8.0.0
 * Upgraded Azure Monitor Pipelines API version from 2024-10-01-preview to GA version 2026-04-01
     - Added 'DistributionMaxInstancesPerHost' parameter to control maximum instances per compute unit
     - Added 'ExecutionPlacementConstraint' parameter to guide where pipeline group instances should run

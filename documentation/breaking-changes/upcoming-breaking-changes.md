@@ -654,12 +654,12 @@ Preview modules are not included in this list. Read more about [module version t
 ### `Get-AzMonitorWorkspace`
 
 - Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.Api20230403.IAzureMonitorWorkspaceResource' is changing
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IAzureMonitorWorkspaceResource' is changing
   - The following properties in the output type are being deprecated : 'PrivateEndpointConnection' 'ProvisioningState'
   - The following properties are being added to the output type : 'PrivateEndpointConnection' 'ProvisioningState'
   - Change description : The types of the properties PrivateEndpointConnection and ProvisioningState will be changed from single object or fixed array to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '7.0.0'
+  - The change is expected to take effect in 'Az.Monitor' from version : '7.0.0'
 
 ### `Get-AzSubscriptionDiagnosticSetting`
 
@@ -713,7 +713,7 @@ Preview modules are not included in this list. Read more about [module version t
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect in 'Az.Monitor' from version : '7.0.0'
 
-- Parameter breaking-change will happen to parameter set `NewAzDiagnosticSetting_CreateExpanded`
+- Parameter breaking-change will happen to all parameter sets
   - `-Log`
     - The parameter : 'Log' is changing.
     The type of the parameter is changing from 'Array' to 'List'.
@@ -723,12 +723,12 @@ Preview modules are not included in this list. Read more about [module version t
 ### `New-AzMonitorWorkspace`
 
 - Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.Api20230403.IAzureMonitorWorkspaceResource' is changing
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IAzureMonitorWorkspaceResource' is changing
   - The following properties in the output type are being deprecated : 'PrivateEndpointConnection' 'ProvisioningState'
   - The following properties are being added to the output type : 'PrivateEndpointConnection' 'ProvisioningState'
   - Change description : The types of the properties PrivateEndpointConnection and ProvisioningState will be changed from single object or fixed array to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '7.0.0'
+  - The change is expected to take effect in 'Az.Monitor' from version : '7.0.0'
 
 ### `New-AzSubscriptionDiagnosticSetting`
 
@@ -759,12 +759,12 @@ Preview modules are not included in this list. Read more about [module version t
 ### `Update-AzMonitorWorkspace`
 
 - Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.Api20230403.IAzureMonitorWorkspaceResource' is changing
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IAzureMonitorWorkspaceResource' is changing
   - The following properties in the output type are being deprecated : 'PrivateEndpointConnection' 'ProvisioningState'
   - The following properties are being added to the output type : 'PrivateEndpointConnection' 'ProvisioningState'
   - Change description : The types of the properties PrivateEndpointConnection and ProvisioningState will be changed from single object or fixed array to 'List'. 
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-  - The change is expected to take effect from version : '7.0.0'
+  - The change is expected to take effect in 'Az.Monitor' from version : '7.0.0'
 
 ### `Update-AzSubscriptionDiagnosticSetting`
 
@@ -931,83 +931,6 @@ Preview modules are not included in this list. Read more about [module version t
 - Cmdlet breaking-change will happen to all parameter sets
   - The cmdlet is being deprecated. There will be no replacement for it.
   - This change is expected to take effect from Az.Network version: Az.Network: 8.0.0 and Az version: Az: 15.0.0
-
-## Az.PolicyInsights
-
-### `Get-AzPolicyAttestation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation' to the new type :'Attestation'
-  - The following properties in the output type are being deprecated : 'SystemData'
-  - The following properties are being added to the output type : 'ResourceGroupName' 'SystemDataCreatedAt' 'SystemDataCreatedBy' 'SystemDataCreatedByType' 'SystemDataLastModifiedAt' 'SystemDataLastModifiedBy' 'SystemDataLastModifiedByType'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Get-AzPolicyEvent`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.Commands.PolicyInsights.Models.PolicyEvent' is changing
-  - The following properties in the output type are being deprecated : 'ResourceTags' 'ManagementGroupIds'
-  - The following properties are being added to the output type : 'ResourceTag' 'ManagementGroupId' 'ComplianceState' 'Component' 'EffectiveParameter' 'OdataContext' 'OdataId' 'Keys' 'Values' 'Count' 'AdditionalProperties'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Get-AzPolicyMetadata`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.PolicyInsights.Models.PSPolicyMetadata' to the new type :'PolicyMetadata'
-  - The following properties are being added to the output type : 'ResourceGroupName'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Get-AzPolicyRemediation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.PolicyInsights.Models.Remediation.PSRemediation' to the new type :'Remediation'
-  - The following properties in the output type are being deprecated : 'Filters' 'DeploymentSummary' 'FailureThreshold' 'ParallelDeployments'
-  - The following properties are being added to the output type : 'FilterLocation' 'FilterResourceId' 'DeploymentStatusFailedDeployment' 'DeploymentStatusSuccessfulDeployment' 'DeploymentStatusTotalDeployment' 'FailureThresholdPercentage' 'ParallelDeployment' 'ResourceGroupName' 'SystemDataCreatedAt' 'SystemDataCreatedBy' 'SystemDataCreatedByType' 'SystemDataLastModifiedAt' 'SystemDataLastModifiedBy' 'SystemDataLastModifiedByType'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Get-AzPolicyState`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.Commands.PolicyInsights.Models.PolicyState' is changing
-  - The following properties in the output type are being deprecated : 'ResourceTags' 'ManagementGroupIds'
-  - The following properties are being added to the output type : 'ResourceGroupName' 'ResourceTag' 'ManagementGroupId'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Get-AzPolicyStateSummary`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type 'Microsoft.Azure.Commands.PolicyInsights.Models.PolicyStateSummary' is changing
-  - The following properties in the output type are being deprecated : 'PolicyAssignments' 'Results'
-  - The following properties are being added to the output type : 'PolicyAssignment' 'ResultCompliantResource' 'ResultNonCompliantPolicy' 'ResultNonCompliantResource' 'ResultPolicyDetail' 'ResultPolicyGroupDetail' 'ResultQueryResultsUri' 'ResultResourceDetail' 'OdataId' 'OdataContext'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `New-AzPolicyAttestation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation' to the new type :'Attestation'
-  - The following properties in the output type are being deprecated : 'SystemData'
-  - The following properties are being added to the output type : 'ResourceGroupName' 'SystemDataCreatedAt' 'SystemDataCreatedBy' 'SystemDataCreatedByType' 'SystemDataLastModifiedAt' 'SystemDataLastModifiedBy' 'SystemDataLastModifiedByType'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Set-AzPolicyAttestation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation' to the new type :'Attestation'
-  - The following properties in the output type are being deprecated : 'SystemData'
-  - The following properties are being added to the output type : 'ResourceGroupName' 'SystemDataCreatedAt' 'SystemDataCreatedBy' 'SystemDataCreatedByType' 'SystemDataLastModifiedAt' 'SystemDataLastModifiedBy' 'SystemDataLastModifiedByType'
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Start-AzPolicyRemediation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - Start-AzPolicyRemediation will now return when the Remediation reaches a terminal state unless you use the new NoWait parameter.
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
-
-### `Stop-AzPolicyRemediation`
-
-- Cmdlet breaking-change will happen to all parameter sets
-  - Stop-AzPolicyRemediation will now have a NoWait switch parameter as well as returning the Remediation object instead of just a boolean.
-  - This change is expected to take effect from Az.PolicyInsights version: 2.0.0 and Az version: 16.0.0
 
 ## Az.PostgreSql
 
@@ -1259,14 +1182,7 @@ Preview modules are not included in this list. Read more about [module version t
   - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
   - The change is expected to take effect in 'Az.Resources' from version : '9.0.0'
 
-- Parameter breaking-change will happen to parameter set `UpdateAzRoleManagementPolicy_UpdateExpanded`
-  - `-Rule`
-    - The parameter : 'Rule' is changing.
-    The type of the parameter is changing from 'Array' to 'List'.
-    - This change will take effect on '11/3/2025'- The change is expected to take effect from Az version : '15.0.0'
-    - The change is expected to take effect in 'Az.Resources' from version : '9.0.0'
-
-- Parameter breaking-change will happen to parameter set `UpdateAzRoleManagementPolicy_UpdateViaIdentityExpanded`
+- Parameter breaking-change will happen to all parameter sets
   - `-Rule`
     - The parameter : 'Rule' is changing.
     The type of the parameter is changing from 'Array' to 'List'.

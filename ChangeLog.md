@@ -1,3 +1,80 @@
+## 16.0.0 - June 2026
+#### Az.Accounts 5.4.2
+* Upgraded 'Azure.Identity' dependency from 1.13.0 to 1.17.2.
+
+#### Az.Compute 11.6.0
+* Added '-InstantAccess' parameter to 'New-AzRestorePointCollection' cmdlet to enable instant access snapshots for restore points on Premium SSD v2 and Ultra disks
+* Added '-InstantAccess' parameter to 'Update-AzRestorePointCollection' cmdlet to enable or disable instant access on an existing restore point collection
+* Added '-InstantAccessDurationInMinutes' parameter to 'New-AzRestorePoint' cmdlet to specify the duration (1-300 minutes) for which the instant access snapshot is retained
+
+#### Az.DataProtection 2.10.1
+* Fixed non-ASCII U+2013 characters failed module import in WindowsPowerShell
+
+#### Az.FileShare 1.0.0
+* General availability for module Az.FileShare
+
+#### Az.FrontDoor 2.2.0
+* Upgraded API version to 2025-11-01.
+* Hid newly introduced 'NetworkExperimentProfile', 'Experiment', 'PreconfiguredEndpoint', 'ReportLatencyScorecard', and 'ReportTimesery' cmdlets that are not part of the public Az.FrontDoor surface area.
+* Fixed 'New-AzFrontDoorWafPolicy' / 'Remove-AzFrontDoorWafPolicy' failing with 'UriFormatException: Invalid URI: The URI is empty.' by rewriting the long-running-operation 'final-state-via' from 'location' to 'original-uri' on WAF 'Policies_CreateOrUpdate' and 'Policies_Delete' (the service returns the terminal state synchronously and does not emit a 'Location' header).
+
+#### Az.KeyVault 6.4.4
+* Fixed 'New-AzKeyVault' 'RequestDisallowedByPolicy' error by explicitly setting 'enableSoftDelete' in the request body to satisfy Azure Policy checks
+
+#### Az.Kusto 2.4.2
+* Preannounced breaking changes. Please refer to https://go.microsoft.com/fwlink/?linkid=2333229
+
+#### Az.LoadTesting 2.0.0
+* Improved user experience and consistency. This may introduce breaking changes. Please refer to [here](https://go.microsoft.com/fwlink/?linkid=2340249).
+
+#### Az.Migrate 3.0.0
+* Improved user experience and consistency. This may introduce breaking changes. Please refer to [here](https://go.microsoft.com/fwlink/?linkid=2340249).
+
+#### Az.Monitor 8.0.0
+* Upgraded Azure Monitor Pipelines API version from 2024-10-01-preview to GA version 2026-04-01
+    - Added 'DistributionMaxInstancesPerHost' parameter to control maximum instances per compute unit
+    - Added 'ExecutionPlacementConstraint' parameter to guide where pipeline group instances should run
+    - Added 'TlsConfiguration' parameter to configure TLS (Transport Layer Security) settings for pipeline group receivers
+    - Removed 'NetworkingConfiguration' parameter from 'New-AzPipelineGroup' and 'Update-AzPipelineGroup'
+    - Removed UDP receiver type support from pipeline group receivers
+    - Removed public properties/parameters 'TcpUrl', 'JsonArrayMapperKey', 'SourceFieldName', and 'SyslogProtocol'
+    - Removed 'DestinationField*' public properties/parameters
+    - Expanded parameter sets for the updated pipeline-related cmdlets, which may require script changes when upgrading
+
+#### Az.Network 8.0.0
+* Updated 'UserAssignedIdentityId' parameter type from string to string[] in Azure Firewall Policy to input multiple UAMIs
+
+#### Az.PolicyInsights 2.0.0
+* The output type of 'Get-AzPolicyAttestation', 'New-AzPolicyAttestation', and 'Set-AzPolicyAttestation' will change from 'PSAttestation' to 'Attestation'
+    - The 'SystemData' property will be deprecated and replaced with flattened properties: 'SystemDataCreatedAt', 'SystemDataCreatedBy', 'SystemDataCreatedByType', 'SystemDataLastModifiedAt', 'SystemDataLastModifiedBy', 'SystemDataLastModifiedByType'
+    - A new 'ResourceGroupName' property will be added
+* The output type of 'Get-AzPolicyEvent' will change
+    - The 'ResourceTags' and 'ManagementGroupIds' properties will be deprecated and replaced with 'ResourceTag' and 'ManagementGroupId'
+    - New properties will be added: 'ComplianceState', 'Component', 'EffectiveParameter', 'OdataContext', 'OdataId', 'Keys', 'Values', 'Count', 'AdditionalProperties'
+* The output type of 'Get-AzPolicyState' will change
+    - The 'ResourceTags' and 'ManagementGroupIds' properties will be deprecated and replaced with 'ResourceTag' and 'ManagementGroupId'
+    - A new 'ResourceGroupName' property will be added
+* The output type of 'Get-AzPolicyStateSummary' will change
+    - The 'PolicyAssignments' and 'Results' properties will be deprecated and replaced with flattened properties including 'PolicyAssignment', 'ResultCompliantResource', 'ResultNonCompliantPolicy', 'ResultNonCompliantResource', and others
+    - New properties will be added: 'OdataId', 'OdataContext'
+* The output type of 'Get-AzPolicyMetadata' will change from 'PSPolicyMetadata' to 'PolicyMetadata'
+    - A new 'ResourceGroupName' property will be added
+* The output type of 'Get-AzPolicyRemediation' and 'Start-AzPolicyRemediation' will change from 'PSRemediation' to 'Remediation'
+    - The 'Filters', 'DeploymentSummary', 'FailureThreshold', and 'ParallelDeployments' properties will be deprecated and replaced with flattened properties including 'FilterLocation', 'FilterResourceId', 'DeploymentStatusFailedDeployment', 'DeploymentStatusSuccessfulDeployment', 'DeploymentStatusTotalDeployment', 'FailureThresholdPercentage', 'ParallelDeployment'
+    - New properties will be added: 'ResourceGroupName', 'SystemDataCreatedAt', 'SystemDataCreatedBy', 'SystemDataCreatedByType', 'SystemDataLastModifiedAt', 'SystemDataLastModifiedBy', 'SystemDataLastModifiedByType'
+* 'Start-AzPolicyRemediation' will now return when the Remediation reaches a terminal state unless you use the new 'NoWait' parameter
+* The output type of 'Stop-AzPolicyRemediation' will change from 'bool' to 'Remediation'
+    - 'Stop-AzPolicyRemediation' will now have a 'NoWait' switch parameter as well as returning the Remediation object instead of just a boolean
+
+#### Az.ResourceMover 2.0.0
+* Improved user experience and consistency. This may introduce breaking changes. Please refer to [here](https://go.microsoft.com/fwlink/?linkid=2340249).
+
+#### Az.ServiceFabric 5.2.0
+* Added 'Get-AzServiceFabricManagedClusterMaintenanceWindowStatus' cmdlet to retrieve the maintenance window status of a Service Fabric Managed Cluster, including whether the window is enabled, active, and recent activity timestamps.
+
+#### Az.Sql 6.5.0
+* Added support for User Assigned Managed Identity (UAMI) authentication in Data Sync cmdlets ('New-AzSqlSyncGroup', 'Update-AzSqlSyncGroup', 'New-AzSqlSyncMember', 'Update-AzSqlSyncMember')
+
 ## 15.6.1 - May 2026
 #### Az.DataProtection 2.10.1
 * Fixed non-ASCII U+2013 characters failed module import in WindowsPowerShell

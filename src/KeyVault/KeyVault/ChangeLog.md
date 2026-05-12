@@ -18,6 +18,8 @@
         - Additional information about change #1
 -->
 ## Upcoming Release
+
+## Version 6.4.4
 * Fixed `New-AzKeyVault` `RequestDisallowedByPolicy` error by explicitly setting `enableSoftDelete` in the request body to satisfy Azure Policy checks
 
 ## Version 6.4.3
